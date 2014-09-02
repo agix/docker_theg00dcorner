@@ -18,6 +18,7 @@ ADD supervisord-apache2.conf /etc/supervisor/conf.d/supervisord-apache2.conf
 
 # config to enable .htaccess
 ADD apache_default /etc/apache2/sites-available/000-default.conf
+ADD .htpasswd /etc/apache2/.htpasswd
 RUN a2enmod rewrite
 
 # Configure /app folder with sample app
