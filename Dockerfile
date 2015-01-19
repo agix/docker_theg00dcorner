@@ -23,7 +23,7 @@ RUN a2enmod rewrite
 
 # Configure /app folder with sample app
 RUN mkdir -p /app
-RUN git clone https://github.com/agix/vuln_g00dcorner /app/content
+RUN git clone https://github.com/scrtexos/vuln_g00dcorner /app/content
 RUN rm -rf /app/content/.git
 RUN mkdir -p /app/secured && mkdir -p /app/content && rm -fr /var/www/html && ln -s /app/content /var/www/html
 RUN mkdir -p /app/secured/avatars && mkdir -p /app/secured/photos
